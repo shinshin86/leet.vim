@@ -1,7 +1,7 @@
 scriptencoding utf-8
-command! -nargs=1 Leet call s:Leet(<f-args>)
+command! -nargs=1 Leet call s:InsertLeetText(<f-args>)
 
-function! s:Leet(input)
+function! s:ConvertToLeet(text)
   let res = []
 
   " reference : https://ja.wikipedia.org/wiki/Leet
@@ -34,15 +34,15 @@ function! s:Leet(input)
 
   let LEET_LIST = [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
 
-  for i in range(0, len(a:input))
+  for i in range(0, len(a:text))
     for j in range(0, len(LEET_LIST) - 1)
-      if(toupper(a:input[i]) == LEET_LIST[j][0])
+      if(toupper(a:text[i]) == LEET_LIST[j][0])
         call add(res, LEET_LIST[j][s:Rand(len(LEET_LIST[j]))])
       endif
     endfor
   endfor
   
-  echo join(res, '')
+  return join(res, '')
 endfunction
 
 function! s:Rand(num)
@@ -53,4 +53,9 @@ function! s:Rand(num)
   else
     return a:num - 1
   endif
+endfunction
+
+function! s:InsertLeetText(input_text)
+  let leet_text = s:ConvertToLeet(a:input_text)
+  execute ":normal a" . leet_text
 endfunction
