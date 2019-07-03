@@ -47,8 +47,10 @@ endfunction
 
 function! s:Rand(num)
   if has('reltime')
-    return reltime()[0] % a:num
+    let match_end = matchend(reltimestr(reltime()), '\d\+\.') + 1
+    let rand = reltimestr(reltime())[match_end : ] % a:num
+    return rand
   else
-    return a:num
+    return a:num - 1
   endif
 endfunction
