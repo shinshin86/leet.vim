@@ -4,6 +4,12 @@ This is created to learn Vimscript.
 
 
 
+## Demo
+
+![demo gif](demo/demo.gif)
+
+
+
 ## Setup and Usage
 
 1. In terminal
