@@ -10,7 +10,27 @@ This is created to learn Vimscript.
 
 
 
-## Setup and Usage
+## Install and Usage
+
+### Plug Install
+
+1. Add `.vimrc`
+
+```vim
+Plug 'shinshin86/leet.vim'
+```
+
+2. PlugInstall
+
+   launch to vim then `:PlugInstall`
+
+3. Let's leetspeak!
+
+   launch to vim then `:Leet hello`
+
+
+
+## Development
 
 1. In terminal
 
