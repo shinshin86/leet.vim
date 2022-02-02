@@ -60,7 +60,7 @@ As for the string for leet conversion, I using the string described in this page
 
 ## Licence
 
-MIT & [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/legalcode)
+[MIT](https://github.com/shinshin86/leet.vim/blob/master/LICENSE) & [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/legalcode)
 
 In the getLeetList function, character combinations taken from Wikipedia are used. For this reason, only this function is CC-BY-SA 3.0 Licence.
 
